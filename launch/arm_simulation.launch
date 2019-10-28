@@ -1,0 +1,25 @@
+<launch>
+  <arg name="arm_type"/>
+  <arg name="urdf_file" default="$(find hebi_description)/urdf/kits/$(arg arm_type).xacro" />
+
+  <param name="robot_description" command="$(find xacro)/xacro --xacro-ns '$(arg urdf_file)'" />
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="use_sim_time" value="true"/>
+    <arg name="debug" value="false"/>
+    <arg name="gui" value="true"/>
+    <arg name="world_name" value="$(find hebi_gazebo)/worlds/basic_test.world"/>
+  </include>
+
+  <node name="spawn_model" pkg="gazebo_ros" type="spawn_model"
+        args="-z 0.5 -urdf -param robot_description -model RobotArm" />
+
+  <include file="$(find hebi_cpp_api_examples)/launch/arm_node.launch">
+    <arg name="arm_type" value="$(arg arm_type)" />
+  </include>
+
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">
+    <param name="publish_frequency" type="double" value="30.0" />
+  </node>
+ 
+</launch>

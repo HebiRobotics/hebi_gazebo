@@ -17,9 +17,9 @@ export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:/path/to/your/ros_ws/src
 ```
 Note that the plugin path should point to the directory under hebi_gazebo/plugin/ that matches your version of Gazebo. For ROS Melodic, the default is Gazebo9, for ROS Kinetic the default is Gazebo7.
 
-2. Make sure that `hebi_gazebo` and `hebi_description` are cloned and built in your current, sourced workspace.
+2. Make sure that `hebi_gazebo`, `hebi_description`, and `hebi_cpp_api_ros_examples` are cloned and built in your current, sourced workspace.
 3. To test, run the following command:
-`roslaunch hebi_gazebo arm_simulation.launch arm_type:=a-2085-06`
+`roslaunch hebi_gazebo arm_simulation.launch arm_type:=A-2085-06`
 4. You should see the 6-DoF arm kit rendered in Gazebo. A `rostopic list` should show several topic-based interfaces for controlling the arm.
 Note that the ROS nodes for simulation are identical to those used for controlling HEBI hardware.
 

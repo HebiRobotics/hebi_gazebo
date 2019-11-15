@@ -1,5 +1,5 @@
 <launch>
-  <arg name="arm_type"/>
+  <arg name="arm_type" default="A-2085-04"/>
   <arg name="gripper_type" default="none"/>
 
   <arg name="urdf_file" default="$(find hebi_description)/urdf/kits/$(arg arm_type).xacro" />

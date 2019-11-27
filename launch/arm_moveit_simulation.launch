@@ -1,13 +1,16 @@
 <launch>
-  <arg name="arm_type" default="A-2085-04"/>
-  <arg name="gripper_type" default="none"/>
+  <arg name="arm_type" default="A-2085-06"/>
 
-  <arg name="urdf_file" default="$(find hebi_description)/urdf/kits/$(arg arm_type).xacro" />
+  <arg name="use_sim_time" default="true"/>
+  <param name="use_sim_time" value="$(arg use_sim_time)"/>
 
-  <param name="robot_description" command="$(find xacro)/xacro --xacro-ns '$(arg urdf_file)'" />
+  <arg name="hrdf_file" default="$(find hebi_description)/hrdf/$(arg arm_type).hrdf" />
+  <arg name="config_file" default="$(find hebi_cpp_api_examples)/config/$(arg arm_type)_params.yaml" />
+
+  <param name="robot_description" command="$(find hebi_description)/scripts/hrdf_convert $(arg hrdf_file) $(arg config_file)" />
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="use_sim_time" value="true"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
     <arg name="debug" value="false"/>
     <arg name="gui" value="true"/>
     <arg name="world_name" value="$(find hebi_gazebo)/worlds/basic_test.world"/>

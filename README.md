@@ -24,10 +24,11 @@ Note that the plugin path should point to the directory under hebi_gazebo/plugin
 Note that the ROS nodes for simulation are identical to those used for controlling HEBI hardware.
 
 ### Simulating without ROS
+NOTE: Currently the hebi_description pipeline that generates SDF files is not working properly without a minimal ROS install. Specifically, the xacro conversion process uses rospack to find hebi_description. Once the SDF file is generated, there is no direct dependency on ROS.
 To simulate a robot in Gazebo without ROS, we will need to generate SDF files, so that Gazebo can model our robot. These files can be generated from the kit HRDF files using tools contained in the hebi_description package.
 1. clone/download the hebi_gazebo and hebi_description packages.
 2. Install xacro from pypy (https://pypi.org/project/xacro/)
-3. Run the script hebi_description/tools/generate_pipeline_batch_v1.bash
+3. Run the script hebi_description/scripts/generate_pipeline_batch_v1.bash
 This generates SDF model folders for each arm HRDF contained in hebi_description/hrdf.
 If you would like to use this script to convert your own custom HRDF, the generate_pipeline_v1.bash script can be passed a file for conversion.
 4. At this point the hebi_description/models directory should contain several subdirectories, one for each processed hrdf file.

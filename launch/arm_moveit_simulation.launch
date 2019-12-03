@@ -1,5 +1,6 @@
 <launch>
   <arg name="arm_type" default="A-2085-06"/>
+  <arg name="gripper_type" value="none"/>
 
   <arg name="use_sim_time" default="true"/>
   <param name="use_sim_time" value="$(arg use_sim_time)"/>
@@ -22,6 +23,7 @@
   <include file="$(find hebi_cpp_api_examples)/launch/arm_moveit_node.launch">
     <arg name="arm_type" value="$(arg arm_type)" />
     <arg name="gripper_type" value="$(arg gripper_type)" />
+    <arg name="config_dir" value="$(find hebi_gazebo)/config" />
   </include>
  
 </launch>

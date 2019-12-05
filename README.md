@@ -1,5 +1,5 @@
 # hebi_gazebo
-
+### NOTE: Intended for use with Gazebo versions 7 (Ubuntu 16.04) and 9 (Ubuntu 18.04) only, other configurations untested
 This repository holds the plugins and configuration files used to simulate HEBI robots in Gazebo.
 In addition, you will need the model files contained in the hebi_description package, or your own hrdf/urdf in the case of a custom robot.
 You may also want to download hebi_moveit_configs if you are interested in Moveit! integration.

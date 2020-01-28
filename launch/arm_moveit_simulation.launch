@@ -23,7 +23,7 @@
   <include file="$(find hebi_cpp_api_examples)/launch/arm_moveit_node.launch">
     <arg name="arm_type" value="$(arg arm_type)" />
     <arg name="gripper_type" value="$(arg gripper_type)" />
-    <arg name="config_dir" value="$(find hebi_gazebo)/config" />
+    <arg name="config_dir" value="$(find hebi_cpp_api_examples)/config" />
   </include>
  
 </launch>

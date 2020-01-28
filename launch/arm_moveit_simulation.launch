@@ -8,7 +8,7 @@
   <arg name="hrdf_file" default="$(find hebi_description)/hrdf/$(arg arm_type).hrdf" />
   <arg name="config_file" default="$(find hebi_cpp_api_examples)/config/$(arg arm_type)_params.yaml" />
 
-  <param name="robot_description" command="$(find hebi_description)/scripts/hrdf_convert $(arg hrdf_file) $(arg config_file)" />
+  <param name="robot_description" command="$(find hebi_description)/scripts/hrdf_convert $(arg config_file)" />
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>

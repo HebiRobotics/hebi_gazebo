@@ -20,7 +20,7 @@
 
   <include file="$(find hebi_cpp_api_examples)/launch/arm_node.launch">
     <arg name="arm_type" value="$(arg arm_type)" />
-    <arg name="config_dir" value="$(find hebi_gazebo)/config" />
+    <arg name="config_dir" value="$(find hebi_cpp_api_examples)/config" />
   </include>
 
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher">

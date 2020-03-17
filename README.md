@@ -28,12 +28,10 @@ Note that the ROS nodes for simulation are identical to those used for controlli
 
 1. Install the gazebo simulator. Follow the instructions at http://gazebosim.org/tutorials?tut=install_ubuntu
 2. Clone/download hebi_gazebo. This does not need to be in any particular location. hebi_gazebo/models contains several subdirectories, one for each HEBI kit model.
-3. Gazebo needs to be told the location of the HEBI plugin and models. To do this, set the following environment variables:
+3. Gazebo needs to be told the location of the HEBI plugin and models. To do this, put the following line in your ~/.bashrc file:
 ```
-export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:path/to/hebi_gazebo/plugin/gazebo9
-export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:/path/to/hebi_gazebo/models
+source /path/to/hebi_gazebo/scripts/setup_environment.bash
 ```
-Note that the plugin path should point to the directory under hebi_gazebo/plugin/ that matches your version of Gazebo (gazebo7 or 9).
 
 4. You can load your model into Gazebo in one of two ways:
     1. run gazebo from the terminal `gazebo`.

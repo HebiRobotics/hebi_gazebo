@@ -1,0 +1,36 @@
+<launch>
+  <arg name="use_sim_time" default="true"/>
+  <param name="use_sim_time" value="$(arg use_sim_time)"/>
+
+  <param name="robot_description" command="$(find xacro)/xacro --xacro-ns $(find hebi_description)/urdf/kits/daisy.xacro" />
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="debug" value="false"/>
+    <arg name="gui" value="true"/>
+    <arg name="paused" value="true"/>
+    <arg name="world_name" value="$(find hebi_gazebo)/worlds/basic_test.world"/>
+  </include>
+
+  <node name="spawn_model" pkg="gazebo_ros" type="spawn_model"
+        args="-z 0.5 -urdf -param robot_description -model Daisy
+              -J Daisy/L1_J1_base 0.0
+              -J Daisy/L1_J2_shoulder -0.5
+              -J Daisy/L1_J3_elbow 2.0
+              -J Daisy/L2_J1_base 0.0
+              -J Daisy/L2_J2_shoulder -0.5
+              -J Daisy/L2_J3_elbow 2.0
+              -J Daisy/L3_J1_base 0.0
+              -J Daisy/L3_J2_shoulder -0.5
+              -J Daisy/L3_J3_elbow 2.0
+              -J Daisy/L4_J1_base 0.0
+              -J Daisy/L4_J2_shoulder -0.5
+              -J Daisy/L4_J3_elbow 2.0
+              -J Daisy/L5_J1_base 0.0
+              -J Daisy/L5_J2_shoulder -0.5
+              -J Daisy/L5_J3_elbow 2.0
+              -J Daisy/L6_J1_base 0.0
+              -J Daisy/L6_J2_shoulder -0.5
+              -J Daisy/L6_J3_elbow 2.0
+              -unpause" />
+</launch>

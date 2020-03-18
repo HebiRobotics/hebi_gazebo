@@ -12,7 +12,7 @@ While this package is compatible with ROS simulation methods, the HEBI Gazebo pl
 ### Simulating with ROS
 1. Gazebo needs to know the path to the HEBI plugin and models. This is done by setting the GAZEBO_PLUGIN_PATH and GAZEBO_MODEL_PATH environment variables.
 ```
-export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:path/to/your/ros_ws/src/hebi_gazebo/plugin/gazebo9
+export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/path/to/your/ros_ws/src/hebi_gazebo/plugin/gazebo9
 export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:/path/to/your/ros_ws/src
 ```
 Note that the plugin path should point to the directory under hebi_gazebo/plugin/ that matches your version of Gazebo. For ROS Melodic, the default is Gazebo9, for ROS Kinetic the default is Gazebo7.
@@ -27,13 +27,11 @@ Note that the ROS nodes for simulation are identical to those used for controlli
 *NOTE: Currently the hebi_description pipeline that generates SDF files is not working properly without a minimal ROS install. Specifically, the xacro conversion process uses rospack to find hebi_description. Once the SDF file is generated, there is no direct dependency on ROS.*
 
 1. Install the gazebo simulator. Follow the instructions at http://gazebosim.org/tutorials?tut=install_ubuntu
-2. Clone hebi_gazebo and [hebi_description](https://github.com/HebiRobotics/hebi_description) into the same directory. This does not need to be in any particular location. The hebi_description/models directory contains several subdirectories, one for each HEBI kit model.
-3. Gazebo needs to be told the location of the HEBI plugin and models. To do this, set the following environment variables:
+2. Clone/download hebi_gazebo. This does not need to be in any particular location. hebi_gazebo/models contains several subdirectories, one for each HEBI kit model.
+3. Gazebo needs to be told the location of the HEBI plugin and models. To do this, put the following line in your ~/.bashrc file:
 ```
-export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:path/to/hebi_gazebo/plugin/gazebo9
-export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:/path/to/hebi_description/models
+source /path/to/hebi_gazebo/scripts/setup_environment.bash
 ```
-Note that the plugin path should point to the directory under hebi_gazebo/plugin/ that matches your version of Gazebo (gazebo7 or 9).
 
 4. You can load your model into Gazebo in one of two ways:
     1. run gazebo from the terminal `gazebo`.

@@ -19,7 +19,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/R8.stl</uri>
+            <uri>model://meshes/R8.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -36,7 +36,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/R8.stl</uri>
+            <uri>model://meshes/R8.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -72,7 +72,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/A-2221-01-Outside.stl</uri>
+            <uri>model://meshes/A-2221-01-Outside.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -89,7 +89,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/A-2221-01-Outside.stl</uri>
+            <uri>model://meshes/A-2221-01-Outside.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -139,7 +139,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/R8.stl</uri>
+            <uri>model://meshes/R8.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -156,7 +156,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/R8.stl</uri>
+            <uri>model://meshes/R8.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -212,7 +212,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hebi_description/meshes/A-2038-02.stl</uri>
+            <uri>model://meshes/A-2038-02.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -246,7 +246,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hebi_description/meshes/A-2039-02.stl</uri>
+            <uri>model://meshes/A-2039-02.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -263,7 +263,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hebi_description/meshes/A-2038-02.stl</uri>
+            <uri>model://meshes/A-2038-02.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -293,7 +293,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hebi_description/meshes/A-2039-02.stl</uri>
+            <uri>model://meshes/A-2039-02.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -343,7 +343,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/R8.stl</uri>
+            <uri>model://meshes/R8.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -360,7 +360,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/R8.stl</uri>
+            <uri>model://meshes/R8.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -416,7 +416,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hebi_description/meshes/A-2038-02.stl</uri>
+            <uri>model://meshes/A-2038-02.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -450,7 +450,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hebi_description/meshes/A-2039-02.stl</uri>
+            <uri>model://meshes/A-2039-02.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -467,7 +467,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hebi_description/meshes/A-2038-02.stl</uri>
+            <uri>model://meshes/A-2038-02.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -497,7 +497,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>model://hebi_description/meshes/A-2039-02.stl</uri>
+            <uri>model://meshes/A-2039-02.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -547,7 +547,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/R8.stl</uri>
+            <uri>model://meshes/R8.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -564,7 +564,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/R8.stl</uri>
+            <uri>model://meshes/R8.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -620,7 +620,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/A-2220-01.stl</uri>
+            <uri>model://meshes/A-2220-01.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -637,7 +637,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/A-2220-01.stl</uri>
+            <uri>model://meshes/A-2220-01.stl</uri>
           </mesh>
         </geometry>
         <material>
@@ -687,7 +687,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/R8.stl</uri>
+            <uri>model://meshes/R8.stl</uri>
           </mesh>
         </geometry>
         <surface>
@@ -704,7 +704,7 @@
         <geometry>
           <mesh>
             <scale>0.001 0.001 0.001</scale>
-            <uri>model://hebi_description/meshes/R8.stl</uri>
+            <uri>model://meshes/R8.stl</uri>
           </mesh>
         </geometry>
         <material>

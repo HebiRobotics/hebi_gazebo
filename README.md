@@ -12,7 +12,7 @@ While this package is compatible with ROS simulation methods, the HEBI Gazebo pl
 ### Simulating with ROS
 1. Gazebo needs to know the path to the HEBI plugin and models. This is done by setting the GAZEBO_PLUGIN_PATH and GAZEBO_MODEL_PATH environment variables.
 ```
-export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:path/to/your/ros_ws/src/hebi_gazebo/plugin/gazebo9
+export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/path/to/your/ros_ws/src/hebi_gazebo/plugin/gazebo9
 export GAZEBO_MODEL_PATH=${GAZEBO_MODEL_PATH}:/path/to/your/ros_ws/src
 ```
 Note that the plugin path should point to the directory under hebi_gazebo/plugin/ that matches your version of Gazebo. For ROS Melodic, the default is Gazebo9, for ROS Kinetic the default is Gazebo7.

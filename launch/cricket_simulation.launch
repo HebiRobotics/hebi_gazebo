@@ -2,7 +2,7 @@
   <arg name="use_sim_time" default="true"/>
   <param name="use_sim_time" value="$(arg use_sim_time)"/>
 
-  <param name="robot_description" command="xacro $(find hebi_description)/urdf/kits/cricket.xacro" />
+  <param name="robot_description" command="$(find xacro)/xacro --xacro-ns $(find hebi_description)/urdf/kits/daisy.xacro" />
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>
@@ -13,7 +13,31 @@
   </include>
 
   <node name="spawn_model" pkg="gazebo_ros" type="spawn_model"
-        args="-z 1.0 -urdf -param robot_description -model Cricket -unpause" />
+        args="-z 0.5 -urdf -param robot_description -model Cricket
+              -J Cricket/L1_J1_shoulder1 0.0
+              -J Cricket/L1_J2_shoulder2 0.0
+              -J Cricket/L1_J3_knee 0.0
+              -J Cricket/L1_J4_ankle 0.0
+              -J Cricket/L1_J5_tread 0.0
+
+              -J Cricket/L2_J1_shoulder1 0.0
+              -J Cricket/L2_J2_shoulder2 0.0
+              -J Cricket/L2_J3_knee 0.0
+              -J Cricket/L2_J4_ankle 0.0
+              -J Cricket/L2_J5_tread 0.0
+
+              -J Cricket/L3_J1_shoulder1 0.0
+              -J Cricket/L3_J2_shoulder2 0.0
+              -J Cricket/L3_J3_knee 0.0
+              -J Cricket/L3_J4_ankle 0.0
+              -J Cricket/L3_J5_tread 0.0
+
+              -J Cricket/L4_J1_shoulder1 0.0
+              -J Cricket/L4_J2_shoulder2 0.0
+              -J Cricket/L4_J3_knee 0.0
+              -J Cricket/L4_J4_ankle 0.0
+              -J Cricket/L4_J5_tread 0.0
+              -unpause" />
 
   <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui"/>
 
@@ -22,5 +46,4 @@
   </node>
 
   <node name="rviz" pkg="rviz" type="rviz"/>
-
 </launch>

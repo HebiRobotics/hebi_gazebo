@@ -2,7 +2,7 @@
   <arg name="use_sim_time" default="true"/>
   <param name="use_sim_time" value="$(arg use_sim_time)"/>
 
-  <param name="robot_description" command="$(find xacro)/xacro --xacro-ns $(find hebi_description)/urdf/kits/daisy.xacro" />
+  <param name="robot_description" command="$(find xacro)/xacro --xacro-ns $(find hebi_description)/urdf/kits/cricket.xacro" />
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>
@@ -45,5 +45,5 @@
     <param name="publish_frequency" type="double" value="30.0" />
   </node>
 
-  <node name="rviz" pkg="rviz" type="rviz"/>
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find hebi_gazebo)/config/cricket.rviz"/>
 </launch>
